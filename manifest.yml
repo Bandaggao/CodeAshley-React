@@ -1,0 +1,15 @@
+---
+declared-services:
+  assistant-prod:
+    label: assistant
+applications:
+- name: my-watson-bot
+  route: my-watson-bot
+  command: npm start
+  path: .
+  instances: 1
+  services:
+  - Watson Assistant (formerly Conversation)-oe
+  memory: 1024M
+  env:
+    NPM_CONFIG_PRODUCTION: false
